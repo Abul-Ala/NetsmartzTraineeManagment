@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<title>Home Page</title>
+</head>
+<body>
+<div class="container">
+	<h2>Welcome to Netsmartz trainer Management System</h2>
+
+	<br />
+	<br />
+	<br />
+	<br />
+	<form action="search">
+		<input type="text" name="id" placeholder="find trainee by id" /> <input type="submit"
+			value="Search">
+	</form>
+	<br />
+	<form action="add">
+		<input type="submit" value="Add new trainee">
+	</form>
+		<br />
+	<form action="addTrainer">
+		<input type="submit" value="Add new Trainer">
+	</form>
+	
+	<br />
+	<form action="addLanguage">
+		<input type="submit" value="Add new Language">
+	</form>
+	
+	<br />
+	<form action="deleteLanguage">
+		<input type="submit" value="Delete Language">
+	</form>
+	
+	<br />
+	<form action="viewModifyDeleteTrainee">
+		<input type="submit" value="View/Modify/Delete Trainee">
+	</form>
+	
+	<br />
+	<form action="viewModifyDeleteTrainer">
+		<input type="submit" value="View/Modify/Delete Trainer">
+	</form>
+	</div>
+	
+	
+	</div>
+	
+</body>
+</html>

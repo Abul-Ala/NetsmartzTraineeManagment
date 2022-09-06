@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<title>Tranee Home</title>
+</head>
+<body>
+	<div class="container">
+
+		<h2>Add new Tranee</h2>
+		<form th:action="addNewTrainee"    th:object=${trainee} >
+			  <input type="hidden" th:field="*{traineeId}"/><br>
+			<br> <input type="text" th:field="*{traineeName}" name="traineeName" placeholder="Enter name"><br>
+			<br> <input type="text" th:field="*{traineeEmail}" name="traineeEmail" placeholder="Enter email"><br>
+			<br> <input type="text" th:field="*{traineePhone}" name="traineePhone" placeholder="Enter phone"><br>
+			
+			<br>
+			 <h5>Skills</h5>
+               <th:block th:each="lang :${languages}">
+               <input type="checkbox" th:field="*{language}" th:text="${lang.skill}"
+                th:value="${lang.skillId}" />
+				</th:block>
+				<br>
+				<br>
+				
+				<h5>Trainers</h5>
+               <th:block th:each="trainer :${trainers}">
+               <input type="checkbox" th:field="*{trainer}" th:text="${trainer.trainerName}"
+                th:value="${trainer.trainerId}" />
+				</th:block>
+				<br>
+
+			<button type="submit">Add New trainee</button>
+
+		</form>
+	</div>
+
+
+</body>
+</html>
